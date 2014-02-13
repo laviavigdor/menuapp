@@ -26,7 +26,7 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>FacebookAppId</key>
+	<key>FacebookAppID</key>
 	<string>607226875992665</string>
 	<key>FacebookDisplayName</key>
 	<string>menuapp</string>

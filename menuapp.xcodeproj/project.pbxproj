@@ -14,7 +14,7 @@
 		C515F46418ABA2E900D62460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F46318ABA2E900D62460 /* main.m */; };
 		C515F46818ABA2E900D62460 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F46718ABA2E900D62460 /* AppDelegate.m */; };
 		C515F46B18ABA2E900D62460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C515F46918ABA2E900D62460 /* Main.storyboard */; };
-		C515F46E18ABA2E900D62460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F46D18ABA2E900D62460 /* ViewController.m */; };
+		C515F46E18ABA2E900D62460 /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F46D18ABA2E900D62460 /* FBLoginViewController.m */; };
 		C515F47018ABA2E900D62460 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C515F46F18ABA2E900D62460 /* Images.xcassets */; };
 		C515F47718ABA2E900D62460 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F47618ABA2E900D62460 /* XCTest.framework */; };
 		C515F47818ABA2E900D62460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F45718ABA2E900D62460 /* Foundation.framework */; };
@@ -22,6 +22,8 @@
 		C515F48118ABA2E900D62460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C515F47F18ABA2E900D62460 /* InfoPlist.strings */; };
 		C515F48318ABA2E900D62460 /* menuappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F48218ABA2E900D62460 /* menuappTests.m */; };
 		C515F48D18ABAA6800D62460 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F48C18ABAA6800D62460 /* FacebookSDK.framework */; };
+		C515F49018ACA02D00D62460 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F48F18ACA02D00D62460 /* Data.m */; };
+		C515F49318ACA41000D62460 /* RestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F49218ACA41000D62460 /* RestaurantsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +48,8 @@
 		C515F46618ABA2E900D62460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C515F46718ABA2E900D62460 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C515F46A18ABA2E900D62460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C515F46C18ABA2E900D62460 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C515F46D18ABA2E900D62460 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C515F46C18ABA2E900D62460 /* FBLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
+		C515F46D18ABA2E900D62460 /* FBLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		C515F46F18ABA2E900D62460 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C515F47518ABA2E900D62460 /* menuappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = menuappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C515F47618ABA2E900D62460 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -55,6 +57,10 @@
 		C515F48018ABA2E900D62460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C515F48218ABA2E900D62460 /* menuappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = menuappTests.m; sourceTree = "<group>"; };
 		C515F48C18ABAA6800D62460 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		C515F48E18ACA02D00D62460 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		C515F48F18ACA02D00D62460 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		C515F49118ACA41000D62460 /* RestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsViewController.h; sourceTree = "<group>"; };
+		C515F49218ACA41000D62460 /* RestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +125,14 @@
 				C515F46618ABA2E900D62460 /* AppDelegate.h */,
 				C515F46718ABA2E900D62460 /* AppDelegate.m */,
 				C515F46918ABA2E900D62460 /* Main.storyboard */,
-				C515F46C18ABA2E900D62460 /* ViewController.h */,
-				C515F46D18ABA2E900D62460 /* ViewController.m */,
+				C515F49118ACA41000D62460 /* RestaurantsViewController.h */,
+				C515F49218ACA41000D62460 /* RestaurantsViewController.m */,
+				C515F46C18ABA2E900D62460 /* FBLoginViewController.h */,
+				C515F46D18ABA2E900D62460 /* FBLoginViewController.m */,
 				C515F46F18ABA2E900D62460 /* Images.xcassets */,
 				C515F45E18ABA2E900D62460 /* Supporting Files */,
+				C515F48E18ACA02D00D62460 /* Data.h */,
+				C515F48F18ACA02D00D62460 /* Data.m */,
 			);
 			path = menuapp;
 			sourceTree = "<group>";
@@ -203,6 +213,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Toluna;
 				TargetAttributes = {
+					C515F45318ABA2E900D62460 = {
+						DevelopmentTeam = FZ5H2MD82R;
+					};
 					C515F47418ABA2E900D62460 = {
 						TestTargetID = C515F45318ABA2E900D62460;
 					};
@@ -253,9 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C515F46E18ABA2E900D62460 /* ViewController.m in Sources */,
+				C515F46E18ABA2E900D62460 /* FBLoginViewController.m in Sources */,
 				C515F46818ABA2E900D62460 /* AppDelegate.m in Sources */,
 				C515F46418ABA2E900D62460 /* main.m in Sources */,
+				C515F49318ACA41000D62460 /* RestaurantsViewController.m in Sources */,
+				C515F49018ACA02D00D62460 /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +397,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/laviavigdor/Documents/FacebookSDK,
@@ -390,6 +407,7 @@
 				GCC_PREFIX_HEADER = "menuapp/menuapp-Prefix.pch";
 				INFOPLIST_FILE = "menuapp/menuapp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,6 +417,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/laviavigdor/Documents/FacebookSDK,
@@ -407,6 +427,7 @@
 				GCC_PREFIX_HEADER = "menuapp/menuapp-Prefix.pch";
 				INFOPLIST_FILE = "menuapp/menuapp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
