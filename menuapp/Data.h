@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "Restaurant.h"
+#import "User.h"
 
-
-@interface Data : NSObject {
-    NSString *username;
-}
-@property (nonatomic, retain) NSString *username;
+@interface Data : NSObject 
+@property (nonatomic, retain) User *user;
+@property (nonatomic, retain) NSMutableArray *restaurants;
+@property (nonatomic, retain) Restaurant *restaurant;
 @end

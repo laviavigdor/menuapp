@@ -7,10 +7,12 @@
 //
 
 #import "FBLoginViewController.h"
-#import "Data.h"
+#import "RestaurantsViewController.h"
 
 @interface FBLoginViewController ()
 @property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
+
+- (IBAction)btnSkip:(UIButton *)sender;
 @property (nonatomic) Data *data;
 @end
 
@@ -19,24 +21,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"FbLoginViewController viewDidLoad");
     self.fbLoginView.readPermissions = @[@"basic_info",@"email"];
     self.fbLoginView.delegate = self;
     self.data = [[Data alloc] init];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"FbLoginViewController viewWillAppear");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    //user.id;
-    //user.name;
-    NSLog(@"Username: %@", user.name);
-    self.data.username = user.name;
+    NSLog(@"FbLoginViewController loginViewFetchedUserInfo");
+    self.data.user.name = user.name;
+    [self moveToRestaurantsView];
 }
+-(void)moveToRestaurantsView {
+    RestaurantsViewController *restaurantsViewController = [RestaurantsViewController new];
+    restaurantsViewController.data = self.data;
+    NSLog(@"FbLoginViewController moveToRestaurantsView");
+    [self.navigationController pushViewController:restaurantsViewController animated:NO];
+    
+    //    RestaurantsViewController *resturantsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"resturantsViewController"];
+    //    if([resturantsViewController isKindOfClass:[RestaurantsViewController class]])
+    //    {
+    //        resturantsViewController.data = self.data;
+    //
+    //    }
 
-
+}
+- (IBAction)btnSkip:(UIButton *)sender {
+    NSLog(@"btnSkip");
+    [self moveToRestaurantsView];
+}
 @end

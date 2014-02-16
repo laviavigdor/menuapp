@@ -7,9 +7,10 @@
 //
 
 #import "RestaurantsViewController.h"
+#import "MenuViewController.h"
 
 @interface RestaurantsViewController ()
-
+@property (nonatomic, strong) NSArray *tableData;
 @end
 
 @implementation RestaurantsViewController
@@ -26,12 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"RestaurantsViewController viewDidLoad");
+    self.tableData = self.data.restaurants;
+}
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"RestaurantsViewController viewWillAppear");
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,27 +47,57 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
-    
+    Restaurant *restaurant = [self.tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = restaurant.name;
+    //cell.imageView.image
     return cell;
 }
+
+#pragma mark - Navigation
+
+// In a story board-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"RestaurantsViewController prepareForSegue");
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if([segue.destinationViewController isKindOfClass:[MenuViewController class]])
+    {
+        MenuViewController* menuViewController = segue.destinationViewController;
+        menuViewController.data = self.data;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"RestaurantsViewController didSelectRowAtIndexPath CLICK row:%ld",(long)indexPath.row);
+    //self.data.restaurant = indexPath.row;  // self.data.restaurant = self.data.restaurants[indexpath.row
+    [self moveToMenuView];
+}
+-(void)moveToMenuView {
+    NSLog(@"RestaurantsViewController moveToMenuView");
+    MenuViewController *menuViewController = [MenuViewController new];
+    menuViewController.data = self.data;
+    [self.navigationController pushViewController:menuViewController animated:NO];
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,16 +138,7 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
- */
 
 @end

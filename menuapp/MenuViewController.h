@@ -1,5 +1,5 @@
 //
-//  RestaurantsViewController.h
+//  MenuViewController.h
 //  menuapp
 //
 //  Created by Lavi Avigdor 2 on 2/13/14.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Data.h"
 
-@interface RestaurantsViewController : UITableViewController
-@property (nonatomic,strong) Data *data;
+@interface MenuViewController : UIViewController
+@property (nonatomic, strong) Data *data;
 @end
