@@ -28,9 +28,14 @@
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Sagi Sabich"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Patio"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"GreenSalad"]];
-    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Suchia"]];}
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Suchia"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Tzuka"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Manch Pizza"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Crunch Pizza"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"American Pizza"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Burger Runch"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Carmela"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Yoel"]];
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Burgers"]];
+}
 @end
-
-
-
-//self.restaurants = [NSArray arrayWithObjects:@"Momo's Kube", @"Sagi Sabich", @"Patio", @"Greensalad", @"Suchia", @"Tzuka", @"Manch Pizza", @"Crunch Pizza", @"American Pizza", @"Burger Runch", @"Carmela", @"Yoel", @"Burgers",nil];
