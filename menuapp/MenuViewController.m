@@ -56,12 +56,7 @@
     DishCollectionViewCell *dishView = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"dishCollectionViewCell"
                                     forIndexPath:indexPath];
-    /*
-    UIImage *image;
-    long row = [indexPath row];
-    image = [UIImage imageNamed:_carImages[row]];
-    myCell.imageView.image = image;
-    */
+
     
     if([dishView isKindOfClass:[DishCollectionViewCell class]]) {
         NSLog(@"dishView isKindOfClass:[DishCollectionViewCell");
@@ -73,8 +68,8 @@
             if([dish isKindOfClass:[Dish class]]) {
                 dishView.name.text = dish.name;
                 NSLog(@"Dish: %@", dish.name);
-                //dishView.name.image = dish.imageUrl;
-                //dishView.name.description = dish.description;
+                dishView.description.text = dish.description;
+                dishView.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dish.imageUrl]]];
             }
     }
 
