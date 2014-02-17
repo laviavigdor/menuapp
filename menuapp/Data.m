@@ -11,6 +11,16 @@
 
 @implementation Data
 
+
++(instancetype)sharedInstance
+{
+    static Data *instance = nil;
+    if(instance == nil){
+        instance = [[Data alloc] init];
+    }
+    return instance;
+}
+
 -(id)init
 {
     if (self = [super init]) {
@@ -24,6 +34,9 @@
 -(void) loadRestaurants {
     [self.restaurants removeAllObjects];
     
+    NSMutableArray *menu = [[NSMutableArray alloc] initWithCapacity:20];
+    Dish *dish = [[Dish alloc] initWithName:@"French Tuna Salad" andPrice:20 andRating:4];
+    [menu addObject:dish];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Momo's Kube"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Sagi Sabich"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Patio"]];

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
 #import "Restaurant.h"
 #import "User.h"
 
 @interface Data : NSObject 
++(instancetype)sharedInstance; // singleton
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) NSMutableArray *restaurants;
 @property (nonatomic, retain) Restaurant *restaurant;
+
 @end

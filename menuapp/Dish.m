@@ -7,21 +7,31 @@
 //
 
 #import "Dish.h"
+static NSString *const defaultName = @"A sample dish";
+static NSString *const defaultDescription = @"Hard to describe how very good this dish is";
+static NSString *const defaultImageUrl = @"";
 
 @implementation Dish
 -(id)init {
-    NSString *defaultName = @"A dish";
     return [self initWithName:defaultName];
 }
 -(id)initWithName:(NSString *)name {
-    NSInteger defaultRating = 3;
-    return [self initWithName:name andRating:defaultRating];
+    NSNumber *defaultRating = [NSNumber numberWithInteger:(arc4random_uniform(5) + 1)];// random rating 1-5
+    return [self initWithName:name rating:defaultRating];
 }
--(id)initWithName:(NSString *)name andRating:(NSInteger)rating {
+-(id)initWithName:(NSString *)name rating:(NSNumber *)rating {
+    NSNumber *defaultPrice = [NSNumber numberWithDouble:30];
+    return [self initWithName:name description:defaultDescription price:defaultPrice imageUrl:defaultImageUrl rating:rating];
+}
+-(id)initWithName:(NSString *)name description:(NSString *)description price:(NSNumber *)price imageUrl:(NSString *)imageUrl rating:(NSNumber *)rating {
     if (self = [super init]) {
         self.name = name;
+        self.description = description;
+        self.price = price;
+        self.imageUrl = imageUrl;
         self.rating = rating;
     }
     return self;
 }
+
 @end

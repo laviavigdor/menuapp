@@ -11,6 +11,7 @@
 
 @interface Restaurant : NSObject
 -(id)initWithName:(NSString *)name;
+-(id)initWithName:(NSString*)name andMenu:(NSMutableArray *)menu;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSMutableArray *menu; // array of dishes
 @end

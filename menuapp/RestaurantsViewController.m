@@ -19,6 +19,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+
         // Custom initialization
     }
     return self;
@@ -28,7 +29,9 @@
 {
     [super viewDidLoad];
     NSLog(@"RestaurantsViewController viewDidLoad");
+    self.data = [[Data alloc] init];
     self.tableData = self.data.restaurants;
+    self.title = @"Restaurants";
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -90,13 +93,16 @@
     //self.data.restaurant = indexPath.row;  // self.data.restaurant = self.data.restaurants[indexpath.row
     [self moveToMenuView];
 }
--(void)moveToMenuView {
-    NSLog(@"RestaurantsViewController moveToMenuView");
-    MenuViewController *menuViewController = [MenuViewController new];
-    menuViewController.data = self.data;
-    [self.navigationController pushViewController:menuViewController animated:NO];
-}
 
+-(void)moveToMenuView {
+    MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
+    if([menuViewController isKindOfClass:[MenuViewController class]])
+    {
+        menuViewController.data = self.data;
+        [self.navigationController pushViewController:menuViewController animated:YES];
+    }
+    
+}
 
 
 /*

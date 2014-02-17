@@ -41,20 +41,21 @@
                             user:(id<FBGraphUser>)user {
     NSLog(@"FbLoginViewController loginViewFetchedUserInfo");
     self.data.user.name = user.name;
+    
+}
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
+{
     [self moveToRestaurantsView];
 }
+
 -(void)moveToRestaurantsView {
-    RestaurantsViewController *restaurantsViewController = [RestaurantsViewController new];
-    restaurantsViewController.data = self.data;
-    NSLog(@"FbLoginViewController moveToRestaurantsView");
-    [self.navigationController pushViewController:restaurantsViewController animated:NO];
-    
-    //    RestaurantsViewController *resturantsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"resturantsViewController"];
-    //    if([resturantsViewController isKindOfClass:[RestaurantsViewController class]])
-    //    {
-    //        resturantsViewController.data = self.data;
-    //
-    //    }
+        RestaurantsViewController *resturantsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"resturantsViewController"];
+        if([resturantsViewController isKindOfClass:[RestaurantsViewController class]])
+        {
+            resturantsViewController.data = self.data;
+            [self.navigationController pushViewController:resturantsViewController animated:YES];
+        }
 
 }
 - (IBAction)btnSkip:(UIButton *)sender {
