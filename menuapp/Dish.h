@@ -10,11 +10,11 @@
 
 @interface Dish : NSObject
 -(id)initWithName:(NSString *)name;
--(id)initWithName:(NSString *)name rating:(NSNumber *)rating;
--(id)initWithName:(NSString *)name description:(NSString *)description price:(NSNumber *)price imageUrl:(NSString *)imageUrl rating:(NSNumber *)rating;
+-(id)initWithName:(NSString *)name rating:(int)rating;
+-(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageUrl:(NSString *)imageUrl rating:(int)rating;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *description;
-@property (nonatomic, retain) NSNumber *price;
+@property (nonatomic) double price;
 @property (nonatomic, retain) NSString *imageUrl;
-@property (nonatomic) NSNumber *rating;
+@property (nonatomic) int rating;
 @end

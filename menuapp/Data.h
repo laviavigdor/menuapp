@@ -14,6 +14,6 @@
 +(instancetype)sharedInstance; // singleton
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) NSMutableArray *restaurants;
-@property (nonatomic, retain) Restaurant *restaurant;
+@property (nonatomic) int restaurantId;
 
 @end

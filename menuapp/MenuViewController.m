@@ -28,6 +28,7 @@
     [super viewDidLoad];
 	NSLog(@"MenuViewController viewDidLoad");
     self.data = [[Data alloc] init];
+    self.title = ((Restaurant *)[self.data.restaurants objectAtIndex:self.data.restaurantId]).name;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +52,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DishCollectionViewCell *myCell = [collectionView
+    NSLog(@"cellForItemAtIndexPath %ld", (long)indexPath.row);
+    DishCollectionViewCell *dishView = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"dishCollectionViewCell"
                                     forIndexPath:indexPath];
     /*
@@ -61,10 +63,21 @@
     myCell.imageView.image = image;
     */
     
-    if([myCell isKindOfClass:[DishCollectionViewCell class]]) {
-        myCell.name.text = @"A sample dish name";
+    if([dishView isKindOfClass:[DishCollectionViewCell class]]) {
+        NSLog(@"dishView isKindOfClass:[DishCollectionViewCell");
+        Restaurant *restaurant = [self.data.restaurants objectAtIndex:self.data.restaurantId];
+        Dish *dish = [restaurant.menu objectAtIndex:indexPath.row];
+        NSLog(@"Restaurant: %@", restaurant.name);
+        NSLog(@"Menu Items: %lu", (unsigned long)[restaurant.menu count]);
+        NSLog(@"Dish: %@", dish.name);
+            if([dish isKindOfClass:[Dish class]]) {
+                dishView.name.text = dish.name;
+                NSLog(@"Dish: %@", dish.name);
+                //dishView.name.image = dish.imageUrl;
+                //dishView.name.description = dish.description;
+            }
     }
 
-    return myCell;
+    return dishView;
 }
 @end

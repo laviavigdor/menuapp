@@ -25,6 +25,7 @@
 {
     if (self = [super init]) {
         self.user = [[User alloc] init];
+        self.restaurantId = 0;
         self.restaurants = [[NSMutableArray alloc] initWithCapacity:20];
 
         [self loadRestaurants];
@@ -35,9 +36,21 @@
     [self.restaurants removeAllObjects];
     
     NSMutableArray *menu = [[NSMutableArray alloc] initWithCapacity:20];
-    Dish *dish = [[Dish alloc] initWithName:@"French Tuna Salad" andPrice:20 andRating:4];
-    [menu addObject:dish];
-    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Momo's Kube"]];
+    [menu addObject:[[Dish alloc]
+                     initWithName:@"French Tuna Salad"
+                     description:@"Tuna, fresh vegetables, Lettuce ..."
+                     price:45
+                     imageUrl:@"http://www.enjoyyourcooking.com/wp-content/uploads/2009/02/green-tuna-salad.jpg"
+                     rating:4]];
+    [menu addObject:[[Dish alloc]
+                     initWithName:@"Healthy Israeli Salad"
+                     description:@"Chopped vegetables salad, onions, pepper, carrots, tomato ..."
+                     price:43
+                     imageUrl:@"http://challahmaidel.files.wordpress.com/2012/06/israeli-salad.jpg"
+                     rating:5]];
+
+    
+    [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Momo's Kube" andMenu:menu]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Sagi Sabich"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"Patio"]];
     [self.restaurants addObject:[[Restaurant alloc] initWithName:@"GreenSalad"]];

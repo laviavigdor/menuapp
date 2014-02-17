@@ -19,7 +19,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-
         // Custom initialization
     }
     return self;
@@ -90,7 +89,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"RestaurantsViewController didSelectRowAtIndexPath CLICK row:%ld",(long)indexPath.row);
-    //self.data.restaurant = indexPath.row;  // self.data.restaurant = self.data.restaurants[indexpath.row
+    self.data.restaurantId = indexPath.row;
     [self moveToMenuView];
 }
 
@@ -98,7 +97,6 @@
     MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
     if([menuViewController isKindOfClass:[MenuViewController class]])
     {
-        menuViewController.data = self.data;
         [self.navigationController pushViewController:menuViewController animated:YES];
     }
     

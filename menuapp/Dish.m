@@ -16,14 +16,14 @@ static NSString *const defaultImageUrl = @"";
     return [self initWithName:defaultName];
 }
 -(id)initWithName:(NSString *)name {
-    NSNumber *defaultRating = [NSNumber numberWithInteger:(arc4random_uniform(5) + 1)];// random rating 1-5
+    int defaultRating = arc4random_uniform(5) + 1;// random rating 1-5
     return [self initWithName:name rating:defaultRating];
 }
--(id)initWithName:(NSString *)name rating:(NSNumber *)rating {
-    NSNumber *defaultPrice = [NSNumber numberWithDouble:30];
+-(id)initWithName:(NSString *)name rating:(int)rating {
+    double defaultPrice = 30;
     return [self initWithName:name description:defaultDescription price:defaultPrice imageUrl:defaultImageUrl rating:rating];
 }
--(id)initWithName:(NSString *)name description:(NSString *)description price:(NSNumber *)price imageUrl:(NSString *)imageUrl rating:(NSNumber *)rating {
+-(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageUrl:(NSString *)imageUrl rating:(int)rating {
     if (self = [super init]) {
         self.name = name;
         self.description = description;
