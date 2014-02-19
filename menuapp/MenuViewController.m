@@ -27,7 +27,8 @@
 {
     [super viewDidLoad];
 	NSLog(@"MenuViewController viewDidLoad");
-    self.data = [[Data alloc] init];
+    self.data = [Data sharedInstance];
+    NSLog(@"RestaurantId:%d", self.data.restaurantId);
     self.title = ((Restaurant *)[self.data.restaurants objectAtIndex:self.data.restaurantId]).name;
 }
 
@@ -47,29 +48,25 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    Restaurant *restaurant = [self.data.restaurants objectAtIndex:self.data.restaurantId];
+    return [restaurant.menu count];
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cellForItemAtIndexPath %ld", (long)indexPath.row);
     DishCollectionViewCell *dishView = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"dishCollectionViewCell"
                                     forIndexPath:indexPath];
 
-    
     if([dishView isKindOfClass:[DishCollectionViewCell class]]) {
-        NSLog(@"dishView isKindOfClass:[DishCollectionViewCell");
         Restaurant *restaurant = [self.data.restaurants objectAtIndex:self.data.restaurantId];
         Dish *dish = [restaurant.menu objectAtIndex:indexPath.row];
-        NSLog(@"Restaurant: %@", restaurant.name);
-        NSLog(@"Menu Items: %lu", (unsigned long)[restaurant.menu count]);
-        NSLog(@"Dish: %@", dish.name);
             if([dish isKindOfClass:[Dish class]]) {
                 dishView.name.text = dish.name;
-                NSLog(@"Dish: %@", dish.name);
                 dishView.description.text = dish.description;
-                dishView.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:dish.imageUrl]]];
+                dishView.price.text = [NSString stringWithFormat:@"%.2f%@",dish.price,@"₪"];
+                dishView.rating.text = [NSString stringWithFormat:@"%d כוכבים",dish.rating];
+                dishView.image.imageURL = dish.imageUrl;
             }
     }
 

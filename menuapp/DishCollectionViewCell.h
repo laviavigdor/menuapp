@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AsyncImageView.h"
 
 @interface DishCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UITextField *name;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UITextView *description;
+@property (weak, nonatomic) IBOutlet UITextField *description;
+@property (weak, nonatomic) IBOutlet UILabel *price;
+@property (weak, nonatomic) IBOutlet UILabel *rating;
+@property (weak, nonatomic) IBOutlet AsyncImageView *image;
 
 @end

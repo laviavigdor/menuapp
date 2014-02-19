@@ -8,6 +8,7 @@
 
 #import "RestaurantsViewController.h"
 #import "MenuViewController.h"
+#import "AsyncImageView.h"
 
 @interface RestaurantsViewController ()
 @property (nonatomic, strong) NSArray *tableData;
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
     NSLog(@"RestaurantsViewController viewDidLoad");
-    self.data = [[Data alloc] init];
+    self.data = [Data sharedInstance];
     self.tableData = self.data.restaurants;
     self.title = @"Restaurants";
 }
@@ -63,11 +64,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.textLabel.textAlignment = NSTextAlignmentRight;
     }
     
     Restaurant *restaurant = [self.tableData objectAtIndex:indexPath.row];
     cell.textLabel.text = restaurant.name;
-    //cell.imageView.image
+    [cell.imageView setImage:[UIImage imageNamed:@"placeholder"]];
+    
+    cell.imageView.imageURL = restaurant.imageUrl;
+
+//    cell.imageView.imageURL = [NSURL URLWithString:@"http://www.veryicon.com/icon/png/Object/Points%20Of%20Interest/Restaurant%20Blue.png"];
     return cell;
 }
 
@@ -81,8 +87,8 @@
     // Pass the selected object to the new view controller.
     if([segue.destinationViewController isKindOfClass:[MenuViewController class]])
     {
-        MenuViewController* menuViewController = segue.destinationViewController;
-        menuViewController.data = self.data;
+        //MenuViewController* menuViewController = segue.destinationViewController;
+        //menuViewController.data = self.data;
     }
 }
 
@@ -97,6 +103,7 @@
     MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
     if([menuViewController isKindOfClass:[MenuViewController class]])
     {
+        NSLog(@"RestaurantId:%d", self.data.restaurantId);
         [self.navigationController pushViewController:menuViewController animated:YES];
     }
     

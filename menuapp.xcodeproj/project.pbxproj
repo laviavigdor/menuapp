@@ -29,6 +29,8 @@
 		C515F49F18B0A30C00D62460 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F49E18B0A30C00D62460 /* User.m */; };
 		C515F4A318B1566700D62460 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A218B1566700D62460 /* MenuViewController.m */; };
 		C515F4A618B1595A00D62460 /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */; };
+		C515F4AA18B240FE00D62460 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A918B240FE00D62460 /* AsyncImageView.m */; };
+		C515F4AD18B3AFC300D62460 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F4AC18B3AFC200D62460 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		C515F4A218B1566700D62460 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		C515F4A418B1595A00D62460 /* DishCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCollectionViewCell.h; sourceTree = "<group>"; };
 		C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCollectionViewCell.m; sourceTree = "<group>"; };
+		C515F4A818B240FE00D62460 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		C515F4A918B240FE00D62460 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		C515F4AC18B3AFC200D62460 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C515F4AD18B3AFC300D62460 /* CoreLocation.framework in Frameworks */,
 				C515F45A18ABA2E900D62460 /* CoreGraphics.framework in Frameworks */,
 				C515F48D18ABAA6800D62460 /* FacebookSDK.framework in Frameworks */,
 				C515F45C18ABA2E900D62460 /* UIKit.framework in Frameworks */,
@@ -124,6 +130,7 @@
 		C515F45618ABA2E900D62460 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C515F4AC18B3AFC200D62460 /* CoreLocation.framework */,
 				C515F48C18ABAA6800D62460 /* FacebookSDK.framework */,
 				C515F45718ABA2E900D62460 /* Foundation.framework */,
 				C515F45918ABA2E900D62460 /* CoreGraphics.framework */,
@@ -147,8 +154,11 @@
 				C515F49218ACA41000D62460 /* RestaurantsViewController.m */,
 				C515F4A118B1566700D62460 /* MenuViewController.h */,
 				C515F4A218B1566700D62460 /* MenuViewController.m */,
+				C515F4AB18B2413100D62460 /* Libraries */,
+				C515F4A718B20AC000D62460 /* Images */,
 				C515F4A018B0A31900D62460 /* DataObjects */,
 				C515F46F18ABA2E900D62460 /* Images.xcassets */,
+				C515F47C18ABA2E900D62460 /* menuappTests */,
 				C515F45E18ABA2E900D62460 /* Supporting Files */,
 			);
 			path = menuapp;
@@ -194,9 +204,24 @@
 				C515F49B18B0A24500D62460 /* Dish.m */,
 				C515F49D18B0A30C00D62460 /* User.h */,
 				C515F49E18B0A30C00D62460 /* User.m */,
-				C515F47C18ABA2E900D62460 /* menuappTests */,
 			);
 			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		C515F4A718B20AC000D62460 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C515F4AB18B2413100D62460 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C515F4A818B240FE00D62460 /* AsyncImageView.h */,
+				C515F4A918B240FE00D62460 /* AsyncImageView.m */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +329,7 @@
 				C515F49F18B0A30C00D62460 /* User.m in Sources */,
 				C515F49918B0A1D500D62460 /* Restaurant.m in Sources */,
 				C515F46818ABA2E900D62460 /* AppDelegate.m in Sources */,
+				C515F4AA18B240FE00D62460 /* AsyncImageView.m in Sources */,
 				C515F46418ABA2E900D62460 /* main.m in Sources */,
 				C515F49318ACA41000D62460 /* RestaurantsViewController.m in Sources */,
 				C515F49018ACA02D00D62460 /* Data.m in Sources */,

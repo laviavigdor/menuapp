@@ -9,6 +9,7 @@
 #import "FBLoginViewController.h"
 #import "RestaurantsViewController.h"
 
+
 @interface FBLoginViewController ()
 @property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
 
@@ -24,7 +25,7 @@
     NSLog(@"FbLoginViewController viewDidLoad");
     self.fbLoginView.readPermissions = @[@"basic_info",@"email"];
     self.fbLoginView.delegate = self;
-    self.data = [[Data alloc] init];
+    self.data = [Data sharedInstance];
 }
 
 -(void)viewWillAppear:(BOOL)animated

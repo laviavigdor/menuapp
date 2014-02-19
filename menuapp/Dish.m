@@ -9,7 +9,7 @@
 #import "Dish.h"
 static NSString *const defaultName = @"A sample dish";
 static NSString *const defaultDescription = @"Hard to describe how very good this dish is";
-static NSString *const defaultImageUrl = @"";
+
 
 @implementation Dish
 -(id)init {
@@ -21,9 +21,10 @@ static NSString *const defaultImageUrl = @"";
 }
 -(id)initWithName:(NSString *)name rating:(int)rating {
     double defaultPrice = 30;
+    NSURL *defaultImageUrl = [[NSURL alloc] initWithString:@""];
     return [self initWithName:name description:defaultDescription price:defaultPrice imageUrl:defaultImageUrl rating:rating];
 }
--(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageUrl:(NSString *)imageUrl rating:(int)rating {
+-(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageUrl:(NSURL *)imageUrl rating:(int)rating {
     if (self = [super init]) {
         self.name = name;
         self.description = description;
