@@ -66,6 +66,7 @@
                 dishView.description.text = dish.description;
                 dishView.price.text = [NSString stringWithFormat:@"%.2f%@",dish.price,@"₪"];
                 dishView.rating.text = [NSString stringWithFormat:@"%d כוכבים",dish.rating];
+                [dishView.image setImage:[UIImage imageNamed:@"placeholder"]];
                 dishView.image.imageURL = dish.imageUrl;
             }
     }

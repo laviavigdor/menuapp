@@ -11,5 +11,6 @@
 #import "Data.h"
 
 @interface FBLoginViewController : UIViewController <FBLoginViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *location;
 
 @end

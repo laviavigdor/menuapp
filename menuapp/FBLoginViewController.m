@@ -8,11 +8,11 @@
 
 #import "FBLoginViewController.h"
 #import "RestaurantsViewController.h"
-
+#import <CoreLocation/CoreLocation.h>
 
 @interface FBLoginViewController ()
 @property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
-
+@property (nonatomic, strong) IBOutlet CLLocationManager *locationManager;
 - (IBAction)btnSkip:(UIButton *)sender;
 @property (nonatomic) Data *data;
 @end
@@ -26,7 +26,39 @@
     self.fbLoginView.readPermissions = @[@"basic_info",@"email"];
     self.fbLoginView.delegate = self;
     self.data = [Data sharedInstance];
+    
+    // LOCATION
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation; // Highest accuracy
+    [self.locationManager startUpdatingLocation];
+
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude
+                                                      longitude:self.locationManager.location.coordinate.longitude];
+
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"failed with error: %@", error);
+             return;
+         }
+         if(placemarks.count > 0)
+         {
+             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
+             NSLog(@"%@", dictionary);
+             self.location.text = [NSString stringWithFormat:@"%@ %@ %@", [dictionary objectForKey:@"Street"],[dictionary objectForKey:@"City"],[dictionary objectForKey:@"Country"]];
+
+         }
+     }];
+    NSLog(@"%@", [self deviceLocation]);
+    
 }
+- (NSString *)deviceLocation {
+    return [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
+}
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
