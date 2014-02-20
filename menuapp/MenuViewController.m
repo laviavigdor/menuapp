@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "CollectionViewLayout.h"
 
 @interface MenuViewController ()
 
@@ -22,7 +23,6 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -73,4 +73,6 @@
 
     return dishView;
 }
+
+
 @end

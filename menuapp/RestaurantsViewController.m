@@ -100,7 +100,7 @@
 }
 
 -(void)moveToMenuView {
-    MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
+    MenuViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController" ];
     if([menuViewController isKindOfClass:[MenuViewController class]])
     {
         NSLog(@"RestaurantId:%d", self.data.restaurantId);
