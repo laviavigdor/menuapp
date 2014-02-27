@@ -12,4 +12,5 @@
 
 @interface MenuViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) Data *data;
+
 @end

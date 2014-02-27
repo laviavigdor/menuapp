@@ -29,7 +29,8 @@
 	NSLog(@"MenuViewController viewDidLoad");
     self.data = [Data sharedInstance];
     NSLog(@"RestaurantId:%d", self.data.restaurantId);
-    self.title = ((Restaurant *)[self.data.restaurants objectAtIndex:self.data.restaurantId]).name;
+    NSString *restaurantName = ((Restaurant *)[self.data.restaurants objectAtIndex:self.data.restaurantId]).name;
+    self.title = restaurantName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,11 +64,39 @@
         Dish *dish = [restaurant.menu objectAtIndex:indexPath.row];
             if([dish isKindOfClass:[Dish class]]) {
                 dishView.name.text = dish.name;
+                
                 dishView.description.text = dish.description;
+                
                 dishView.price.text = [NSString stringWithFormat:@"%.2f%@",dish.price,@"₪"];
-                dishView.rating.text = [NSString stringWithFormat:@"%d כוכבים",dish.rating];
-                [dishView.image setImage:[UIImage imageNamed:@"placeholder"]];
+                //[dishView.image setImage:[UIImage imageNamed:@"placeholder"]];
                 dishView.image.imageURL = dish.imageUrl;
+                
+                
+                switch (dish.rating) {
+                    case 0:
+                        dishView.rating.text = [NSString stringWithFormat:@"☆☆☆☆☆"];
+                        break;
+                    case 1:
+                        dishView.rating.text = [NSString stringWithFormat:@"★☆☆☆☆"];
+                        break;
+                    case 2:
+                        dishView.rating.text = [NSString stringWithFormat:@"★★☆☆☆"];
+                        break;
+                    case 3:
+                        dishView.rating.text = [NSString stringWithFormat:@"★★★☆☆"];
+                        break;
+                    case 4:
+                        dishView.rating.text = [NSString stringWithFormat:@"★★★★☆"];
+                        break;
+                    case 5:
+                        dishView.rating.text = [NSString stringWithFormat:@"★★★★★"];
+                        break;
+                }
+                
+                
+                dishView.image.layer.cornerRadius = 10;
+                dishView.image.layer.masksToBounds = YES;
+
             }
     }
 

@@ -73,6 +73,11 @@
     
     cell.imageView.imageURL = restaurant.imageUrl;
 
+    
+    cell.imageView.layer.cornerRadius = 5;
+    cell.imageView.layer.masksToBounds = YES;
+
+    
 //    cell.imageView.imageURL = [NSURL URLWithString:@"http://www.veryicon.com/icon/png/Object/Points%20Of%20Interest/Restaurant%20Blue.png"];
     return cell;
 }
