@@ -92,8 +92,15 @@
                         dishView.rating.text = [NSString stringWithFormat:@"★★★★★"];
                         break;
                 }
+                dishView.textField.text = @" ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ... ";
+                
+                // Auto-height (doesn't work..)
+                CGRect frameRect = dishView.textField.frame;
+                frameRect.size.height = 120;
+                dishView.textField.frame = frameRect;
                 
                 
+                // ROUNDED CORNERS
                 dishView.image.layer.cornerRadius = 10;
                 dishView.image.layer.masksToBounds = YES;
 
