@@ -41,45 +41,45 @@
                      initWithName:@"קבב"
                      description:@"מוגש בליווי צ'יפס / חמוצים"
                      price:32
-                     imageUrl:[[NSURL alloc] initWithString:@"https://mealbucket.com/images/4zDxalDDebz_PMNhnT5Q6S6Ja.jpg"]
+                     //imageUrl:[[NSURL alloc] initWithString:@"https://mealbucket.com/images/4zDxalDDebz_PMNhnT5Q6S6Ja.jpg"]
+                     imageName:@"kabab.jpg"
                      rating:4]];
     [menu1 addObject:[[Dish alloc]
                      initWithName:@"מעורב ירושלמי"
                      description:@"מוגש בליווי צ'יפס, סלט וחמוצים"
                      price:32
-                     imageUrl:[[NSURL alloc] initWithString:@"http://omershliva.files.wordpress.com/2011/06/d79ed7a2d795d7a8d791-1.jpg"]
+                     //imageUrl:[[NSURL alloc] initWithString:@"http://omershliva.files.wordpress.com/2011/06/d79ed7a2d795d7a8d791-1.jpg"]
+                     imageName:@"meorav.jpg"
                      rating:5]];
     [menu1 addObject:[[Dish alloc]
                       initWithName:@"שניצל עוף"
                       description:@"מוגש בליווי צ'יפס, סלט / חמוצים"
                       price:32
-                      imageUrl:[[NSURL alloc] initWithString:@"http://www.tavshil.co.il/db/images/m2138y5u.jpg"]
+                      //imageUrl:[[NSURL alloc] initWithString:@"http://www.tavshil.co.il/db/images/m2138y5u.jpg"]
+                      imageName:@"snitzel.jpg"
                       rating:5]];
     [menu1 addObject:[[Dish alloc]
                       initWithName:@"קובה שטוחה + בורגול"
                       description:@"מוגש בליווי צ'יפס, טחינה, עמבה וסלט / חמוצים"
                       price:32
-                      imageUrl:[[NSURL alloc] initWithString:@"http://upload.wikimedia.org/wikipedia/commons/6/6d/Kubbeh_Matfuniyah.jpg"]
+                      //imageUrl:[[NSURL alloc] initWithString:@"http://upload.wikimedia.org/wikipedia/commons/6/6d/Kubbeh_Matfuniyah.jpg"]
+                      imageName:@"kube.jpg"
                       rating:5]];
     [menu1 addObject:[[Dish alloc]
                       initWithName:@"ביף סצ'ואן ירקות מוקפצים ובשר בקר"
                       description:@"מוגש בליווי אורז לבן ושלושה סלטים: כרוב, חמוצי הבית וסלט ירקות"
                       price:32
-                      imageUrl:[[NSURL alloc] initWithString:@"http://62.90.138.233/blogim/kzataheret/images/1860570_956.jpg"]
+                      //imageUrl:[[NSURL alloc] initWithString:@"http://62.90.138.233/blogim/kzataheret/images/1860570_956.jpg"]
+                      imageName:@"beef.jpg"
                       rating:5]];
 
     NSMutableArray *menu2 = [[NSMutableArray alloc] initWithCapacity:20];
     [menu2 addObject:[[Dish alloc]
-                      initWithName:@"French Tuna Salad"
-                      description:@"Tuna, fresh vegetables, Lettuce ..."
-                      price:45
-                      imageUrl:[[NSURL alloc] initWithString:@"http://www.enjoyyourcooking.com/wp-content/uploads/2009/02/green-tuna-salad.jpg"]
-                      rating:4]];
-    [menu2 addObject:[[Dish alloc]
                       initWithName:@"Healthy Israeli Salad"
                       description:@"Chopped vegetables salad, onions, pepper, carrots, tomato ..."
                       price:43
-                      imageUrl:[[NSURL alloc] initWithString:@"http://challahmaidel.files.wordpress.com/2012/06/israeli-salad.jpg"]
+                      //imageUrl:[[NSURL alloc] initWithString:@"http://challahmaidel.files.wordpress.com/2012/06/israeli-salad.jpg"]
+                      imageName:@"salad.jpg"
                       rating:5]];
 
     

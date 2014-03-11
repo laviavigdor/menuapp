@@ -21,15 +21,15 @@ static NSString *const defaultDescription = @"Hard to describe how very good thi
 }
 -(id)initWithName:(NSString *)name rating:(int)rating {
     double defaultPrice = 30;
-    NSURL *defaultImageUrl = [[NSURL alloc] initWithString:@""];
-    return [self initWithName:name description:defaultDescription price:defaultPrice imageUrl:defaultImageUrl rating:rating];
+    NSString *defaultImageName = @"placeholder";
+    return [self initWithName:name description:defaultDescription price:defaultPrice imageName:defaultImageName rating:rating];
 }
--(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageUrl:(NSURL *)imageUrl rating:(int)rating {
+-(id)initWithName:(NSString *)name description:(NSString *)description price:(double)price imageName:(NSString *)imageName rating:(int)rating {
     if (self = [super init]) {
         self.name = name;
         self.description = description;
         self.price = price;
-        self.imageUrl = imageUrl;
+        self.imageName = imageName;
         self.rating = rating;
     }
     return self;

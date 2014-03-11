@@ -8,13 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
+#import "Dish.h"
 
-@interface DishCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *price;
-@property (weak, nonatomic) IBOutlet UILabel *rating;
-@property (weak, nonatomic) IBOutlet AsyncImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *description;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-
+@interface DishCollectionViewCell : UICollectionViewCell <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) Dish *dish;
 @end

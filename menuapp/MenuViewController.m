@@ -7,7 +7,7 @@
 //
 
 #import "MenuViewController.h"
-#import "CollectionViewLayout.h"
+#import "Dish.h"
 
 @interface MenuViewController ()
 
@@ -63,6 +63,8 @@
         Restaurant *restaurant = [self.data.restaurants objectAtIndex:self.data.restaurantId];
         Dish *dish = [restaurant.menu objectAtIndex:indexPath.row];
             if([dish isKindOfClass:[Dish class]]) {
+                dishView.dish = dish;
+                /*
                 dishView.name.text = dish.name;
                 
                 dishView.description.text = dish.description;
@@ -92,6 +94,7 @@
                         dishView.rating.text = [NSString stringWithFormat:@"★★★★★"];
                         break;
                 }
+                
                 dishView.textField.text = @" ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ...  ביקורות על המנה ... ";
                 
                 // Auto-height (doesn't work..)
@@ -103,6 +106,7 @@
                 // ROUNDED CORNERS
                 dishView.image.layer.cornerRadius = 10;
                 dishView.image.layer.masksToBounds = YES;
+                */
 
             }
     }

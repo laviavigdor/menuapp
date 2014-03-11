@@ -31,8 +31,13 @@
 		C515F4A618B1595A00D62460 /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */; };
 		C515F4AA18B240FE00D62460 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A918B240FE00D62460 /* AsyncImageView.m */; };
 		C515F4AD18B3AFC300D62460 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F4AC18B3AFC200D62460 /* CoreLocation.framework */; };
-		C52A407A18B5F7A6009A9611 /* CollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A407918B5F7A6009A9611 /* CollectionViewLayout.m */; };
-		C52A407D18B604E6009A9611 /* CollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C52A407C18B604E6009A9611 /* CollectionViewFlowLayout.m */; };
+		C5F304CF18CDC6140077A06C /* DishTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F304CE18CDC6140077A06C /* DishTableCell.m */; };
+		C5F304D118CF052F0077A06C /* kabab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D018CF052F0077A06C /* kabab.jpg */; };
+		C5F304D718CF09E60077A06C /* snitzel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D218CF09E60077A06C /* snitzel.jpg */; };
+		C5F304D818CF09E60077A06C /* beef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D318CF09E60077A06C /* beef.jpg */; };
+		C5F304D918CF09E60077A06C /* salad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D418CF09E60077A06C /* salad.jpg */; };
+		C5F304DA18CF09E60077A06C /* meorav.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D518CF09E60077A06C /* meorav.jpg */; };
+		C5F304DB18CF09E60077A06C /* kube.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D618CF09E60077A06C /* kube.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +88,14 @@
 		C515F4A818B240FE00D62460 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		C515F4A918B240FE00D62460 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		C515F4AC18B3AFC200D62460 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C52A407818B5F7A6009A9611 /* CollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayout.h; sourceTree = "<group>"; };
-		C52A407918B5F7A6009A9611 /* CollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLayout.m; sourceTree = "<group>"; };
-		C52A407B18B604E5009A9611 /* CollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		C52A407C18B604E6009A9611 /* CollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		C5F304CD18CDC6140077A06C /* DishTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableCell.h; sourceTree = "<group>"; };
+		C5F304CE18CDC6140077A06C /* DishTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableCell.m; sourceTree = "<group>"; };
+		C5F304D018CF052F0077A06C /* kabab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kabab.jpg; sourceTree = "<group>"; };
+		C5F304D218CF09E60077A06C /* snitzel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snitzel.jpg; sourceTree = "<group>"; };
+		C5F304D318CF09E60077A06C /* beef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beef.jpg; sourceTree = "<group>"; };
+		C5F304D418CF09E60077A06C /* salad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salad.jpg; sourceTree = "<group>"; };
+		C5F304D518CF09E60077A06C /* meorav.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meorav.jpg; sourceTree = "<group>"; };
+		C5F304D618CF09E60077A06C /* kube.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kube.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,18 +161,16 @@
 				C515F46618ABA2E900D62460 /* AppDelegate.h */,
 				C515F46718ABA2E900D62460 /* AppDelegate.m */,
 				C515F46918ABA2E900D62460 /* Main.storyboard */,
-				C52A407B18B604E5009A9611 /* CollectionViewFlowLayout.h */,
-				C52A407C18B604E6009A9611 /* CollectionViewFlowLayout.m */,
-				C515F4A418B1595A00D62460 /* DishCollectionViewCell.h */,
-				C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */,
 				C515F46C18ABA2E900D62460 /* FBLoginViewController.h */,
 				C515F46D18ABA2E900D62460 /* FBLoginViewController.m */,
 				C515F49118ACA41000D62460 /* RestaurantsViewController.h */,
 				C515F49218ACA41000D62460 /* RestaurantsViewController.m */,
-				C52A407818B5F7A6009A9611 /* CollectionViewLayout.h */,
-				C52A407918B5F7A6009A9611 /* CollectionViewLayout.m */,
 				C515F4A118B1566700D62460 /* MenuViewController.h */,
 				C515F4A218B1566700D62460 /* MenuViewController.m */,
+				C515F4A418B1595A00D62460 /* DishCollectionViewCell.h */,
+				C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */,
+				C5F304CD18CDC6140077A06C /* DishTableCell.h */,
+				C5F304CE18CDC6140077A06C /* DishTableCell.m */,
 				C515F4AB18B2413100D62460 /* Libraries */,
 				C515F4A718B20AC000D62460 /* Images */,
 				C515F4A018B0A31900D62460 /* DataObjects */,
@@ -221,6 +228,12 @@
 		C515F4A718B20AC000D62460 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C5F304D218CF09E60077A06C /* snitzel.jpg */,
+				C5F304D318CF09E60077A06C /* beef.jpg */,
+				C5F304D418CF09E60077A06C /* salad.jpg */,
+				C5F304D518CF09E60077A06C /* meorav.jpg */,
+				C5F304D618CF09E60077A06C /* kube.jpg */,
+				C5F304D018CF052F0077A06C /* kabab.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -313,9 +326,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F304D118CF052F0077A06C /* kabab.jpg in Resources */,
+				C5F304D818CF09E60077A06C /* beef.jpg in Resources */,
 				C515F47018ABA2E900D62460 /* Images.xcassets in Resources */,
+				C5F304DA18CF09E60077A06C /* meorav.jpg in Resources */,
+				C5F304DB18CF09E60077A06C /* kube.jpg in Resources */,
 				C515F46218ABA2E900D62460 /* InfoPlist.strings in Resources */,
+				C5F304D918CF09E60077A06C /* salad.jpg in Resources */,
 				C515F46B18ABA2E900D62460 /* Main.storyboard in Resources */,
+				C5F304D718CF09E60077A06C /* snitzel.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +362,8 @@
 				C515F46418ABA2E900D62460 /* main.m in Sources */,
 				C515F49318ACA41000D62460 /* RestaurantsViewController.m in Sources */,
 				C515F49018ACA02D00D62460 /* Data.m in Sources */,
-				C52A407D18B604E6009A9611 /* CollectionViewFlowLayout.m in Sources */,
 				C515F4A618B1595A00D62460 /* DishCollectionViewCell.m in Sources */,
-				C52A407A18B5F7A6009A9611 /* CollectionViewLayout.m in Sources */,
+				C5F304CF18CDC6140077A06C /* DishTableCell.m in Sources */,
 				C515F4A318B1566700D62460 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
