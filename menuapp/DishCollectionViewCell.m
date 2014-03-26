@@ -44,6 +44,7 @@
     dishCellView.price.text = [NSString stringWithFormat:@"%.2f%@",self.dish.price,@"₪"];
     [dishCellView.dishImageView setImage:[UIImage imageNamed:self.dish.imageName]];
 
+    NSLog(@"%ld", (long)indexPath.row);
     
     // ROUNDED CORNERS
     dishCellView.dishImageView.layer.cornerRadius = 10;

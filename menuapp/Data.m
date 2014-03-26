@@ -39,28 +39,28 @@
     NSMutableArray *menu1 = [[NSMutableArray alloc] initWithCapacity:20];
     [menu1 addObject:[[Dish alloc]
                      initWithName:@"קבב"
-                     description:@"מוגש בליווי צ'יפס / חמוצים"
+                     description:@"מוגש בליווי צ'יפס או חמוצים"
                      price:32
                      //imageUrl:[[NSURL alloc] initWithString:@"https://mealbucket.com/images/4zDxalDDebz_PMNhnT5Q6S6Ja.jpg"]
                      imageName:@"kabab.jpg"
                      rating:4]];
     [menu1 addObject:[[Dish alloc]
                      initWithName:@"מעורב ירושלמי"
-                     description:@"מוגש בליווי צ'יפס, סלט וחמוצים"
+                     description:@"מוגש בליווי צ'יפס סלט וחמוצים"
                      price:32
                      //imageUrl:[[NSURL alloc] initWithString:@"http://omershliva.files.wordpress.com/2011/06/d79ed7a2d795d7a8d791-1.jpg"]
                      imageName:@"meorav.jpg"
                      rating:5]];
     [menu1 addObject:[[Dish alloc]
                       initWithName:@"שניצל עוף"
-                      description:@"מוגש בליווי צ'יפס, סלט / חמוצים"
+                      description:@"מוגש בליווי קובה וסלט"
                       price:32
                       //imageUrl:[[NSURL alloc] initWithString:@"http://www.tavshil.co.il/db/images/m2138y5u.jpg"]
                       imageName:@"snitzel.jpg"
                       rating:5]];
     [menu1 addObject:[[Dish alloc]
                       initWithName:@"קובה שטוחה + בורגול"
-                      description:@"מוגש בליווי צ'יפס, טחינה, עמבה וסלט / חמוצים"
+                      description:@"מוגש בליווי טחינה, עמבה וסלט / חמוצים"
                       price:32
                       //imageUrl:[[NSURL alloc] initWithString:@"http://upload.wikimedia.org/wikipedia/commons/6/6d/Kubbeh_Matfuniyah.jpg"]
                       imageName:@"kube.jpg"
