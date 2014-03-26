@@ -34,7 +34,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {return 1;}
-    if (section == 1) {return 5;}
+    if (section == 1) {return 3;}
     return 1;
 }
 
@@ -84,14 +84,33 @@
             return dishCellView;
     }
     else if (indexPath.section==1) {
-        ReviewTableCell *dishCellView = [tableView dequeueReusableCellWithIdentifier:reviewTableCell];
-        if (dishCellView == nil) {
-            dishCellView = [[ReviewTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reviewTableCell];
+        ReviewTableCell *reviewCellView = [tableView dequeueReusableCellWithIdentifier:reviewTableCell];
+        if (reviewCellView == nil) {
+            reviewCellView = [[ReviewTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reviewTableCell];
         }
-
-        dishCellView.name.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
         
-        return dishCellView;
+        if (indexPath.row==0) {
+            reviewCellView.name.text = @"דינה ברזילי";
+            [reviewCellView.imageView2 setImage:[UIImage imageNamed:@"Joy.jpg"]];
+            reviewCellView.review.text = @"המנה היתה ממש טעימה. הייתי ממליצה בחום להזמין אותה.";
+        } else if (indexPath.row==1) {
+            reviewCellView.name.text = @"גיל לוויתן";
+            [reviewCellView.imageView2 setImage:[UIImage imageNamed:@"mike.jpeg"]];
+            reviewCellView.review.text = @"היה טעים אך לא מספיק משביע.";
+        } else if (indexPath.row==2) {
+            reviewCellView.name.text = @"רותי פומרנץ";
+            [reviewCellView.imageView2 setImage:[UIImage imageNamed:@"amanda.jpeg"]];
+            reviewCellView.review.text = @"הלכתי לארוחת צהריים שם עם חברה מהעבודה. בתחילה הייתי סקפטית, אך המנה הזו היתה ממש סוף הדרך.";
+        } else {
+            reviewCellView.name.text = @"דינה ברזילי";
+            [reviewCellView.imageView2 setImage:[UIImage imageNamed:@"Joy.jpg"]];
+            reviewCellView.review.text = @"המנה היתה ממש טעימה. הייתי ממליצה בחום להזמין אותה.";
+        }
+        // ROUNDED CORNERS
+        reviewCellView.imageView2.layer.cornerRadius = 10;
+        reviewCellView.imageView2.layer.masksToBounds = YES;
+        
+        return reviewCellView;
     } else {
         [NSException raise:@"Invalid indexPath value" format:@"indexPath of %@ is invalid", indexPath];
         DishTableCell *dishCellView = [tableView dequeueReusableCellWithIdentifier:reviewTableCell];
@@ -105,7 +124,7 @@
     if (indexPath.section==0) {
         return 305.0f;
     } else {
-        return 60.0f;
+        return 70.0f;
     }
 }
 

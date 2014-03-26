@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50EF1EA18E31E0200BD428B /* Joy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C50EF1E918E31E0200BD428B /* Joy.jpg */; };
+		C50EF1ED18E321FA00BD428B /* mike.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C50EF1EB18E321FA00BD428B /* mike.jpeg */; };
+		C50EF1EE18E321FA00BD428B /* amanda.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C50EF1EC18E321FA00BD428B /* amanda.jpeg */; };
 		C515F45818ABA2E900D62460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F45718ABA2E900D62460 /* Foundation.framework */; };
 		C515F45A18ABA2E900D62460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F45918ABA2E900D62460 /* CoreGraphics.framework */; };
 		C515F45C18ABA2E900D62460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F45B18ABA2E900D62460 /* UIKit.framework */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50EF1E918E31E0200BD428B /* Joy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Joy.jpg; sourceTree = "<group>"; };
+		C50EF1EB18E321FA00BD428B /* mike.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mike.jpeg; sourceTree = "<group>"; };
+		C50EF1EC18E321FA00BD428B /* amanda.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amanda.jpeg; sourceTree = "<group>"; };
 		C515F45418ABA2E900D62460 /* menuapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = menuapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C515F45718ABA2E900D62460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C515F45918ABA2E900D62460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -233,6 +239,9 @@
 		C515F4A718B20AC000D62460 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C50EF1EB18E321FA00BD428B /* mike.jpeg */,
+				C50EF1EC18E321FA00BD428B /* amanda.jpeg */,
+				C50EF1E918E31E0200BD428B /* Joy.jpg */,
 				C5F304D218CF09E60077A06C /* snitzel.jpg */,
 				C5F304D318CF09E60077A06C /* beef.jpg */,
 				C5F304D418CF09E60077A06C /* salad.jpg */,
@@ -333,11 +342,14 @@
 			files = (
 				C5F304D118CF052F0077A06C /* kabab.jpg in Resources */,
 				C5F304D818CF09E60077A06C /* beef.jpg in Resources */,
+				C50EF1EA18E31E0200BD428B /* Joy.jpg in Resources */,
 				C515F47018ABA2E900D62460 /* Images.xcassets in Resources */,
+				C50EF1ED18E321FA00BD428B /* mike.jpeg in Resources */,
 				C5F304DA18CF09E60077A06C /* meorav.jpg in Resources */,
 				C5F304DB18CF09E60077A06C /* kube.jpg in Resources */,
 				C515F46218ABA2E900D62460 /* InfoPlist.strings in Resources */,
 				C5F304D918CF09E60077A06C /* salad.jpg in Resources */,
+				C50EF1EE18E321FA00BD428B /* amanda.jpeg in Resources */,
 				C515F46B18ABA2E900D62460 /* Main.storyboard in Resources */,
 				C5F304D718CF09E60077A06C /* snitzel.jpg in Resources */,
 			);

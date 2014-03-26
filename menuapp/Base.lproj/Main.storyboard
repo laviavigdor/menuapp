@@ -157,25 +157,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="GEv-2W-lwe" customClass="CollectionViewFlowLayout">
-                            <size key="itemSize" width="320" height="440"/>
+                            <size key="itemSize" width="320" height="420"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="dishCollectionViewCell" id="gx3-7A-HCh" customClass="DishCollectionViewCell">
-                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
+                                <rect key="frame" x="0.0" y="74" width="320" height="420"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-wx-lgL">
-                                            <rect key="frame" x="0.0" y="-1" width="320" height="440"/>
+                                        <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="307" sectionHeaderHeight="20" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-wx-lgL">
+                                            <rect key="frame" x="0.0" y="-1" width="320" height="420"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <prototypes>
                                                 <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dishTableCell" rowHeight="305" id="GGa-L4-3QI" customClass="DishTableCell">
-                                                    <rect key="frame" x="0.0" y="22" width="320" height="305"/>
+                                                    <rect key="frame" x="0.0" y="20" width="320" height="305"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GGa-L4-3QI" id="HGu-0Z-BYt">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="304"/>
@@ -304,27 +304,24 @@
                                                     </connections>
                                                 </tableViewCell>
                                                 <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewTableCell" rowHeight="60" id="O0s-zP-AOs" customClass="ReviewTableCell">
-                                                    <rect key="frame" x="0.0" y="327" width="320" height="60"/>
+                                                    <rect key="frame" x="0.0" y="325" width="320" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0s-zP-AOs" id="7kJ-1R-F3G">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-R2-QWY">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-R2-QWY">
                                                                 <rect key="frame" x="261" y="8" width="48" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="48" id="C2v-fS-YfI"/>
-                                                                </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="פלוני אלמוני" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-I8-8Zh">
-                                                                <rect key="frame" x="25" y="8" width="228" height="21"/>
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="פלוני אלמוני" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-I8-8Zh">
+                                                                <rect key="frame" x="25" y="2" width="228" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מנה משהו משהו" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG0-5Q-2ky">
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="מנה משהו משהו" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="DG0-5Q-2ky">
                                                                 <rect key="frame" x="9" y="27" width="244" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
@@ -332,17 +329,7 @@
                                                             </label>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="tGp-I8-8Zh" firstAttribute="top" secondItem="7kJ-1R-F3G" secondAttribute="top" constant="8" id="04O-Rr-sys"/>
-                                                            <constraint firstItem="Tdl-R2-QWY" firstAttribute="leading" secondItem="tGp-I8-8Zh" secondAttribute="trailing" constant="8" symbolic="YES" id="2ED-RV-Y42"/>
-                                                            <constraint firstItem="Tdl-R2-QWY" firstAttribute="top" secondItem="tGp-I8-8Zh" secondAttribute="top" id="7VA-Pj-1oz"/>
-                                                            <constraint firstAttribute="bottom" secondItem="DG0-5Q-2ky" secondAttribute="bottom" constant="9" id="Aah-Yq-yQ8"/>
-                                                            <constraint firstItem="tGp-I8-8Zh" firstAttribute="leading" secondItem="7kJ-1R-F3G" secondAttribute="leading" constant="25" id="IjY-T6-yJF"/>
-                                                            <constraint firstItem="DG0-5Q-2ky" firstAttribute="leading" secondItem="7kJ-1R-F3G" secondAttribute="leading" constant="9" id="SB8-GA-LHa"/>
-                                                            <constraint firstItem="Tdl-R2-QWY" firstAttribute="leading" secondItem="DG0-5Q-2ky" secondAttribute="trailing" constant="8" symbolic="YES" id="ZyZ-13-igM"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Tdl-R2-QWY" secondAttribute="bottom" constant="7" id="dbx-7F-GvU"/>
-                                                            <constraint firstAttribute="bottom" secondItem="tGp-I8-8Zh" secondAttribute="bottom" constant="30" id="jBK-kX-xc6"/>
-                                                            <constraint firstItem="DG0-5Q-2ky" firstAttribute="top" secondItem="7kJ-1R-F3G" secondAttribute="top" constant="27" id="kEt-aX-0Ub"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Tdl-R2-QWY" secondAttribute="trailing" constant="11" id="qtW-lm-MSc"/>
+                                                            <constraint firstItem="DG0-5Q-2ky" firstAttribute="top" secondItem="tGp-I8-8Zh" secondAttribute="bottom" constant="4" id="Z96-VM-kAy"/>
                                                         </constraints>
                                                     </tableViewCellContentView>
                                                     <connections>
