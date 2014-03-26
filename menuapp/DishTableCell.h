@@ -16,6 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *description;
 @property (weak, nonatomic) IBOutlet UILabel *rating;
 @property (weak, nonatomic) IBOutlet UILabel *price;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 
 @end

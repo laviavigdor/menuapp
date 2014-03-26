@@ -31,6 +31,7 @@
 		C515F4A618B1595A00D62460 /* DishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */; };
 		C515F4AA18B240FE00D62460 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C515F4A918B240FE00D62460 /* AsyncImageView.m */; };
 		C515F4AD18B3AFC300D62460 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515F4AC18B3AFC200D62460 /* CoreLocation.framework */; };
+		C574BD8B18E2C89C005EB656 /* ReviewTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C574BD8A18E2C89C005EB656 /* ReviewTableCell.m */; };
 		C5F304CF18CDC6140077A06C /* DishTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F304CE18CDC6140077A06C /* DishTableCell.m */; };
 		C5F304D118CF052F0077A06C /* kabab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D018CF052F0077A06C /* kabab.jpg */; };
 		C5F304D718CF09E60077A06C /* snitzel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F304D218CF09E60077A06C /* snitzel.jpg */; };
@@ -88,6 +89,8 @@
 		C515F4A818B240FE00D62460 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		C515F4A918B240FE00D62460 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		C515F4AC18B3AFC200D62460 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C574BD8918E2C89C005EB656 /* ReviewTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableCell.h; sourceTree = "<group>"; };
+		C574BD8A18E2C89C005EB656 /* ReviewTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableCell.m; sourceTree = "<group>"; };
 		C5F304CD18CDC6140077A06C /* DishTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableCell.h; sourceTree = "<group>"; };
 		C5F304CE18CDC6140077A06C /* DishTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableCell.m; sourceTree = "<group>"; };
 		C5F304D018CF052F0077A06C /* kabab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kabab.jpg; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				C515F4A518B1595A00D62460 /* DishCollectionViewCell.m */,
 				C5F304CD18CDC6140077A06C /* DishTableCell.h */,
 				C5F304CE18CDC6140077A06C /* DishTableCell.m */,
+				C574BD8918E2C89C005EB656 /* ReviewTableCell.h */,
+				C574BD8A18E2C89C005EB656 /* ReviewTableCell.m */,
 				C515F4AB18B2413100D62460 /* Libraries */,
 				C515F4A718B20AC000D62460 /* Images */,
 				C515F4A018B0A31900D62460 /* DataObjects */,
@@ -291,7 +296,7 @@
 		C515F44C18ABA2E900D62460 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Toluna;
 				TargetAttributes = {
 					C515F45318ABA2E900D62460 = {
@@ -363,6 +368,7 @@
 				C515F49318ACA41000D62460 /* RestaurantsViewController.m in Sources */,
 				C515F49018ACA02D00D62460 /* Data.m in Sources */,
 				C515F4A618B1595A00D62460 /* DishCollectionViewCell.m in Sources */,
+				C574BD8B18E2C89C005EB656 /* ReviewTableCell.m in Sources */,
 				C5F304CF18CDC6140077A06C /* DishTableCell.m in Sources */,
 				C515F4A318B1566700D62460 /* MenuViewController.m in Sources */,
 			);
@@ -418,7 +424,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -457,7 +462,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -529,7 +533,6 @@
 		C515F48A18ABA2E900D62460 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/menuapp.app/menuapp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -552,7 +555,6 @@
 		C515F48B18ABA2E900D62460 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/menuapp.app/menuapp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

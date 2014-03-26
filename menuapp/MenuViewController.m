@@ -55,6 +55,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"collectionView cellForItemAtIndexPath:%ld", (long)indexPath.row);
     DishCollectionViewCell *dishView = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"dishCollectionViewCell"
                                     forIndexPath:indexPath];
@@ -64,6 +65,10 @@
         Dish *dish = [restaurant.menu objectAtIndex:indexPath.row];
             if([dish isKindOfClass:[Dish class]]) {
                 dishView.dish = dish;
+                
+                [dishView reloadTableData];
+
+    
                 /*
                 dishView.name.text = dish.name;
                 
@@ -113,6 +118,7 @@
 
     return dishView;
 }
+
 
 
 @end

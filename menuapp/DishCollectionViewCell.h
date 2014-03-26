@@ -12,4 +12,6 @@
 
 @interface DishCollectionViewCell : UICollectionViewCell <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) Dish *dish;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+-(void) reloadTableData;
 @end
